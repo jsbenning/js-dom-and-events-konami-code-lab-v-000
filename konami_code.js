@@ -3,7 +3,7 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 function init() {
   let ind = 0;
   let current = code[ind];
-  let len = (code.length);
+  let len = (code.length - 1);
 
   function goodGuess(){
     if (ind === len) {       
@@ -22,7 +22,7 @@ function init() {
 
 
   document.addEventListener('keydown', function(e) {
-    let myKey = parseInt(e.which || e.details);
+    let myKey = parseInt(e.which || e.detail);
     if (myKey === current) {
       goodGuess();
     } else {
