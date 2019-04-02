@@ -22,7 +22,7 @@ function init() {
 
 
   document.addEventListener('keydown', function(e) {
-    let myKey = parseInt(e.which || e.details);
+    let myKey = parseInt(e.which || e.detail);
     if (myKey === current) {
       goodGuess();
     } else {
